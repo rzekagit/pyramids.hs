@@ -1,5 +1,7 @@
 target/
 bin/
+dist/
+cabal.sandbox.config
 .*
 !.gitignore
 rebel.xml
