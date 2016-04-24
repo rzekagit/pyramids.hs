@@ -18,7 +18,11 @@ main = do
   fileContent <- readFile fileName
   let task = read fileContent :: Pyramids
 
+  putStrLn "Task: "
   putStrLn (show task)
+
+  putStrLn "Solution: "
+  putStrLn $ show (solve task)
 
 
 
