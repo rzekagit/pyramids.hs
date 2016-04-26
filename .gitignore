@@ -1,3 +1,17 @@
+/editor.xml
+/ignore.xml
+/inspection
+/diff.xml
+/IntelliLang.xml
+/gradle.run.settings.xml
+/project.default.xml
+/haskell.xml
+/vcs.xml
+/web-browsers.xml
+/github_settings.xml
+/filetypes.xml
+/debugger.xml
+/_linux
 target/
 bin/
 dist/*
