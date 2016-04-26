@@ -1,1 +1,2 @@
 # pyramids.hs
+
