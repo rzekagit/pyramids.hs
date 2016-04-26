@@ -2,7 +2,6 @@ target/
 bin/
 dist/
 cabal.sandbox.config
-.*
 !.gitignore
 rebel.xml
 rebel-remote.xml
@@ -11,5 +10,3 @@ rebel-remote.xml
 diagrams/
 *.pass
 logs/
-src/main/resources/git.properties
-rd.json
