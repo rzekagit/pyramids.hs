@@ -1,6 +1,7 @@
 target/
 bin/
-dist/
+dist/*
+.idea/*
 cabal.sandbox.config
 !.gitignore
 rebel.xml
@@ -10,3 +11,5 @@ rebel-remote.xml
 diagrams/
 *.pass
 logs/
+_linux/*
+
