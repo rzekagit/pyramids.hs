@@ -1,3 +1,4 @@
+/.idea
 /editor.xml
 /ignore.xml
 /inspection
@@ -15,7 +16,6 @@
 target/
 bin/
 dist/*
-.idea/*
 cabal.sandbox.config
 !.gitignore
 rebel.xml
