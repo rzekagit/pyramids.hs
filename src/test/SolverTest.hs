@@ -3,5 +3,5 @@ module Main where
 import System.Exit
 
 main = do
-    putStrLn "This test always pass!"
+    putStrLn "It's a stub!"
     exitSuccess

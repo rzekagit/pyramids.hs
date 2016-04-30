@@ -8,14 +8,8 @@ executable pyramids-solver
   hs-source-dirs:  src
   build-depends:   base, directory
 
-Test-Suite test1
+Test-Suite solver-test
   type:       exitcode-stdio-1.0
-  main-is:    Test1.hs
-  hs-source-dirs:  src
-  build-depends: base, directory
-
-Test-Suite test2
-  type:       exitcode-stdio-1.0
-  main-is:    Test2.hs
-  hs-source-dirs:  src
+  main-is:    SolverTest.hs
+  hs-source-dirs:  src/test/
   build-depends: base, directory
