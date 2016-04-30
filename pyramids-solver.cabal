@@ -6,10 +6,10 @@ cabal-version:     >= 1.2
 executable pyramids-solver
   main-is:         Main.hs
   hs-source-dirs:  src
-  build-depends:   base, directory
+  build-depends:   base, directory, hspec, QuickCheck
 
 Test-Suite solver-test
   type:       exitcode-stdio-1.0
-  main-is:    SolverTest.hs
-  hs-source-dirs:  src/test/
-  build-depends: base, directory
+  main-is:    SolverSpec.hs
+  hs-source-dirs:  src/
+  build-depends: base, hspec, QuickCheck
