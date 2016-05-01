@@ -10,5 +10,6 @@ equalLengths (x:xs) | (length x == length (head xs) ) = equalLengths xs
 
 solve :: Pyramids -> [[Int]]
 solve ( Pyramids [] _ _ _ )                            = []
-solve ( Pyramids a b c d ) | equalLengths [a, b, c, d] = [] {-TODO-}
+solve ( Pyramids a b c d ) | allEqual                  = [] {-TODO-}
                            | otherwise                 = error "Invalid input"
+                           where allEqual = equalLengths [a, b, c, d]
