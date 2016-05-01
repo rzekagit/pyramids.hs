@@ -4,7 +4,7 @@ import Test.QuickCheck (quickCheckResult)
 import Test.QuickCheck.Test (isSuccess)
 
 import System.Exit (exitFailure)
-import Control.Monad (when)
+import Control.Monad (unless)
 import Solver
 
 prop_shouldSolve :: Bool
@@ -29,4 +29,4 @@ main = do
                 quickCheckResult prop_shouldSolveOneD ]
 
   success <- fmap (all isSuccess) . sequence $ tests
-  when (not success) $ exitFailure
+  unless success exitFailure
