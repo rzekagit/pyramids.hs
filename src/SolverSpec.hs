@@ -22,11 +22,23 @@ prop_shouldSolveEmpty = solve (Pyramids [] [] [] []) == []
 prop_shouldSolveOneD :: Bool
 prop_shouldSolveOneD = solve (Pyramids [Just 1] [Just 1] [Just 1] [Just 1]) == [[1]]
 
+prop_shouldCheckEqualLengths :: Bool
+prop_shouldCheckEqualLengths = equalLengths [[1, 2], [2, 3]]
+
+prop_shouldCheckEqualLengthsOfEmptyList :: Bool
+prop_shouldCheckEqualLengthsOfEmptyList = equalLengths []
+
+prop_shouldCheckEqualLengthsAndFail :: Bool
+prop_shouldCheckEqualLengthsAndFail = equalLengths [[1], [1, 2, 3]] == False
+
 main :: IO ()
 main = do
   let tests = [ quickCheckResult prop_shouldSolve,
                 quickCheckResult prop_shouldSolveEmpty,
-                quickCheckResult prop_shouldSolveOneD ]
+                quickCheckResult prop_shouldSolveOneD,
+                quickCheckResult prop_shouldCheckEqualLengths,
+                quickCheckResult prop_shouldCheckEqualLengthsOfEmptyList,
+                quickCheckResult prop_shouldCheckEqualLengthsAndFail ]
 
   success <- fmap (all isSuccess) . sequence $ tests
   unless success exitFailure

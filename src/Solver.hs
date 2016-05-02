@@ -5,6 +5,7 @@ data Pyramids = Pyramids [Maybe Int] [Maybe Int] [Maybe Int] [Maybe Int] derivin
 
 equalLengths :: [[a]] -> Bool
 equalLengths []                         = True
+equalLengths (x:[])                     = True
 equalLengths (x:xs) | firstTwoEqual     = equalLengths xs
                     | otherwise         = False
                     where firstTwoEqual = (length x == length (head xs) )
