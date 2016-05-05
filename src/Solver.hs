@@ -11,7 +11,9 @@ equalLengths (x:xs) | firstTwoEqual     = equalLengths xs
                     where firstTwoEqual = (length x == length (head xs) )
 
 solve :: Pyramids -> [[Int]]
-solve ( Pyramids [] _ _ _ )             = []
-solve ( Pyramids a b c d ) | allEqual   = [] {-TODO-}
-                           | otherwise  = error "Invalid input"
-                           where allEqual = equalLengths [a, b, c, d]
+solve ( Pyramids up down left right ) | allEqual   = [] {-TODO-}
+                                      | otherwise  = error "Invalid input"
+                                      where allEqual = equalLengths [up, down, left, right]
+
+
+
