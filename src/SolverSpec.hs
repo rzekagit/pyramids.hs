@@ -11,6 +11,7 @@ prop_shouldSolve :: Bool
 prop_shouldSolve = solve (Pyramids [Just 3 , Nothing, Just 1 , Nothing]
                                    [Nothing, Nothing, Nothing, Nothing]
                                    [Nothing, Nothing, Just 4 , Nothing]
+<<<<<<< HEAD
                                    [Nothing, Just 3 , Nothing, Nothing]) == Just [[2, 1, 4, 3],
                                                                              [3, 4, 2, 1],
                                                                              [1, 2, 3, 4],
@@ -21,6 +22,18 @@ prop_shouldSolveEmpty = solve (Pyramids [] [] [] []) == Just []
 
 prop_shouldSolveOneD :: Bool
 prop_shouldSolveOneD = solve (Pyramids [Just 1] [Just 1] [Just 1] [Just 1]) == Just [[1]]
+=======
+                                   [Nothing, Just 3 , Nothing, Nothing]) == [[2, 1, 4, 3],
+                                                                             [3, 4, 2, 1],
+                                                                             [1, 2, 3, 4],
+                                                                             [4, 3, 2, 1]]
+
+prop_shouldSolveEmpty :: Bool
+prop_shouldSolveEmpty = solve (Pyramids [] [] [] []) == []
+
+prop_shouldSolveOneD :: Bool
+prop_shouldSolveOneD = solve (Pyramids [Just 1] [Just 1] [Just 1] [Just 1]) == [[1]]
+>>>>>>> 2bcdade4022194c685d80a8b0dc672c268a476f8
 
 prop_shouldCheckEqualLengths :: Bool
 prop_shouldCheckEqualLengths = equalLengths [[1, 2], [2, 3]]

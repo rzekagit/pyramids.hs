@@ -2,7 +2,6 @@ module Solver where
 import Data.List
 import Data.Maybe
 
-
 data Pyramids = Pyramids [Maybe Int] [Maybe Int] [Maybe Int] [Maybe Int] deriving (Show, Read)
 
 equalLengths :: [[a]] -> Bool
