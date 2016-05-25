@@ -19,10 +19,10 @@ main = do
   let task = read fileContent :: Pyramids
 
   putStrLn "Task: "
-  putStrLn (show task)
+  print task
 
   putStrLn "Solution: "
-  putStrLn $ show (solve task)
+  print (solve task)
 
 
 
